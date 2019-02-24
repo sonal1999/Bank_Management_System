@@ -45,8 +45,15 @@ public class Bank_App
         int amount;
         System.out.println("\nEnter your amount:");
         amount=sc.nextInt();
-        balance=balance-amount;
-        System.out.println("\nYour amount is withdrawed successfully");
+        if(amount>balance)
+        {
+            System.out.println("Your balnce is low...\n!!!INVALID Transaction");
+        }
+        else {
+            balance = balance - amount;
+            System.out.println("\nYour amount is withdrawed successfully");
+        }
+       
     }
     
     void computeInterest()
